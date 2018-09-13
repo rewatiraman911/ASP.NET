@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Cake Bake</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="bootstrap/css/Style.css" rel="stylesheet" />
+    <script src="bootstrap/js/jquery-3.2.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+        //aspx page i.e child page ka head adjust hoga
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container-fluid">
+            <nav class="navbar navbar-inverse">
+                <button type="button" class="navbar-toggle" data-target="#myMenu" data-toggle="collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div id="myMenu" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="Home.aspx">Home</a></li>
+                        <li><a href="Home.aspx">About</a></li>
+                        <li><a href="Contact.aspx">Contact</a></li>
+                        <li><a href="Home.aspx">Feedback</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+    <div class="container">
+        <section class="row">
+            <div class="col-sm-4">
+                <aside>
+                    <ul class="list-unstyled navbar">
+                        <li><a href="">Birthday Cake</a></li>
+                        <li><a href="">Anniversary Cake</a></li>
+                        <li><a href="">Wedding Cake</a></li>
+                        <li><a href="">Cake & Flowers Combo</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="col-sm-8">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    //child page aspx page ka head adjust hoga.master page me jo kam hoga inke bahar me hoga
+                </asp:ContentPlaceHolder>
+            </div>
+         </section>
+    </div>
+        <div class="container-fluid">
+            <footer class="panel panel-footer">
+                <p>&copy copyright2018 CakeBake.com</p>
+            </footer>
+
+        </div>
+    </form>
+</body>
+</html>
